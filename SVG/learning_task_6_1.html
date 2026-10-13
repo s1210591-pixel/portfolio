@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Learning Task 6.1</title>
+<style>
+  body { text-align: center; font-family: Arial, sans-serif; }
+  svg { background: #fff0f3; border: 3px solid #c9184a; }
+</style>
+</head>
+<body>
+
+<h1>Learning Task 6.1 - SVG Text Art</h1>
+
+<svg width="900" height="780" viewBox="0 0 900 780">
+  <defs>
+    <path id="outer" d="M450,700 C100,480 60,250 190,170 C300,100 420,170 450,250 C480,170 600,100 710,170 C840,250 800,480 450,700 Z" />
+    <path id="middle" d="M450,624 C198,466 169,300 263,243 C342,192 428,243 450,300 C472,243 558,192 637,243 C731,300 702,466 450,624 Z" />
+    <path id="inner" d="M450,549 C296,452 278,351 336,316 C384,285 437,316 450,351 C463,316 516,285 564,316 C622,351 604,452 450,549 Z" />
+  </defs>
+
+  <text font-family="Georgia, serif" font-size="30" letter-spacing="2" fill="#c9184a">
+    <textPath href="#outer">Where there is love, there is life. - Where there is love, there is life. - Where there is love, there is life.</textPath>
+  </text>
+
+  <text font-family="Georgia, serif" font-size="24" fill="#ff4d6d">
+    <textPath href="#middle">Where there is love, there is life. - Where there is love, there is life. - Where there is love, there is life.</textPath>
+  </text>
+
+  <text font-family="Georgia, serif" font-size="20" letter-spacing="1" fill="#ff8fa3">
+    <textPath href="#inner">Where there is love, there is life. - Where there is love, there is life.</textPath>
+  </text>
+
+  <path d="M450,484 C380,440 372,394 398,378 C420,364 444,378 450,394 C456,378 480,364 502,378 C528,394 520,440 450,484 Z" fill="#c9184a" />
+  <text x="450" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="white">LOVE</text>
+
+  <text x="450" y="750" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-style="italic" fill="#c9184a">- Mahatma Gandhi</text>
+</svg>
+
+</body>
+</html>
