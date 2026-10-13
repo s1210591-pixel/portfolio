@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Learning Task 6.2</title>
+<style>
+  body { text-align: center; font-family: Arial, sans-serif; }
+  svg { background: #bde3ff; border: 3px solid #2a7fc4; }
+</style>
+</head>
+<body>
+
+<h1>Learning Task 6.2 - Animated Sun</h1>
+
+<svg width="300" height="300" viewBox="0 0 300 300">
+  <g stroke="#ff9f1c" stroke-width="8" stroke-linecap="round">
+    <line x1="150" y1="70" x2="150" y2="30" />
+    <line x1="150" y1="70" x2="150" y2="30" transform="rotate(45 150 150)" />
+    <line x1="150" y1="70" x2="150" y2="30" transform="rotate(90 150 150)" />
+    <line x1="150" y1="70" x2="150" y2="30" transform="rotate(135 150 150)" />
+    <line x1="150" y1="70" x2="150" y2="30" transform="rotate(180 150 150)" />
+    <line x1="150" y1="70" x2="150" y2="30" transform="rotate(225 150 150)" />
+    <line x1="150" y1="70" x2="150" y2="30" transform="rotate(270 150 150)" />
+    <line x1="150" y1="70" x2="150" y2="30" transform="rotate(315 150 150)" />
+    <animateTransform attributeName="transform" type="rotate" from="0 150 150" to="360 150 150" dur="10s" repeatCount="indefinite" />
+  </g>
+
+  <circle cx="150" cy="150" r="50" fill="#ffd60a" stroke="#ff9f1c" stroke-width="4">
+    <animate attributeName="r" values="50;58;50" dur="2s" repeatCount="indefinite" />
+  </circle>
+
+  <circle cx="132" cy="140" r="6" fill="#333" />
+  <circle cx="168" cy="140" r="6" fill="#333" />
+  <path d="M130 165 Q150 185 170 165" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round" />
+</svg>
+
+</body>
+</html>
