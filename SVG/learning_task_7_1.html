@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Learning Task 7.1</title>
+<style>
+  body { text-align: center; font-family: Arial, sans-serif; }
+  .box { display: inline-block; margin: 10px; }
+  canvas { border: 2px solid #999; background: white; }
+  p { margin: 5px; }
+</style>
+</head>
+<body>
+
+<h1>Learning Task 7.1 - Canvas Art</h1>
+
+<div class="box"><canvas id="c1" width="200" height="200"></canvas><p>1. House</p></div>
+<div class="box"><canvas id="c2" width="200" height="200"></canvas><p>2. Tree</p></div>
+<div class="box"><canvas id="c3" width="200" height="200"></canvas><p>3. Flower</p></div>
+<div class="box"><canvas id="c4" width="200" height="200"></canvas><p>4. Sun and Cloud</p></div>
+<div class="box"><canvas id="c5" width="200" height="200"></canvas><p>5. Rocket</p></div>
+<div class="box"><canvas id="c6" width="200" height="200"></canvas><p>6. Fish</p></div>
+<div class="box"><canvas id="c7" width="200" height="200"></canvas><p>7. Car</p></div>
+<div class="box"><canvas id="c8" width="200" height="200"></canvas><p>8. Snowman</p></div>
+
+<script>
+function circle(ctx, x, y, r, color) {
+  ctx.fillStyle = color;
+  ctx.beginPath();
+  ctx.arc(x, y, r, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+let c1 = document.getElementById("c1").getContext("2d");
+c1.fillStyle = "#cfe8ff";
+c1.fillRect(0, 0, 200, 200);
+c1.fillStyle = "#7bc96f";
+c1.fillRect(0, 170, 200, 30);
+c1.fillStyle = "#f6d7a7";
+c1.fillRect(40, 90, 120, 85);
+c1.fillStyle = "#b5473a";
+c1.beginPath();
+c1.moveTo(30, 90);
+c1.lineTo(100, 35);
+c1.lineTo(170, 90);
+c1.closePath();
+c1.fill();
+c1.fillStyle = "#6b3e26";
+c1.fillRect(88, 125, 28, 50);
+c1.fillStyle = "white";
+c1.fillRect(55, 110, 25, 25);
+c1.fillRect(125, 110, 25, 25);
+
+let c2 = document.getElementById("c2").getContext("2d");
+c2.fillStyle = "#cfe8ff";
+c2.fillRect(0, 0, 200, 200);
+c2.fillStyle = "#7bc96f";
+c2.fillRect(0, 175, 200, 25);
+c2.fillStyle = "#6b3e26";
+c2.fillRect(90, 115, 20, 70);
+circle(c2, 100, 85, 45, "#2e8b57");
+circle(c2, 68, 110, 30, "#3aa66a");
+circle(c2, 132, 110, 30, "#3aa66a");
+
+let c3 = document.getElementById("c3").getContext("2d");
+c3.fillStyle = "#fff7e0";
+c3.fillRect(0, 0, 200, 200);
+c3.fillStyle = "#2e8b57";
+c3.fillRect(97, 110, 6, 90);
+c3.beginPath();
+c3.ellipse(125, 155, 22, 9, -0.5, 0, Math.PI * 2);
+c3.fill();
+for (let i = 0; i < 6; i++) {
+  let angle = i * Math.PI / 3;
+  circle(c3, 100 + Math.cos(angle) * 32, 80 + Math.sin(angle) * 32, 20, "#ff7aa8");
+}
+circle(c3, 100, 80, 18, "#ffd60a");
+
+let c4 = document.getElementById("c4").getContext("2d");
+c4.fillStyle = "#87ceeb";
+c4.fillRect(0, 0, 200, 200);
+c4.strokeStyle = "orange";
+c4.lineWidth = 4;
+for (let i = 0; i < 12; i++) {
+  let a = i * Math.PI / 6;
+  c4.beginPath();
+  c4.moveTo(70 + Math.cos(a) * 45, 70 + Math.sin(a) * 45);
+  c4.lineTo(70 + Math.cos(a) * 58, 70 + Math.sin(a) * 58);
+  c4.stroke();
+}
+circle(c4, 70, 70, 36, "#ffd60a");
+circle(c4, 100, 150, 22, "white");
+circle(c4, 130, 138, 28, "white");
+circle(c4, 160, 152, 20, "white");
+c4.fillStyle = "white";
+c4.fillRect(100, 150, 60, 22);
+
+let c5 = document.getElementById("c5").getContext("2d");
+c5.fillStyle = "#1b1f4b";
+c5.fillRect(0, 0, 200, 200);
+circle(c5, 25, 30, 2, "white");
+circle(c5, 170, 45, 2, "white");
+circle(c5, 30, 150, 2, "white");
+circle(c5, 175, 140, 2, "white");
+circle(c5, 150, 20, 2, "white");
+c5.fillStyle = "#ff6b35";
+c5.beginPath();
+c5.moveTo(85, 150);
+c5.lineTo(100, 190);
+c5.lineTo(115, 150);
+c5.fill();
+c5.fillStyle = "#e63946";
+c5.beginPath();
+c5.moveTo(75, 130);
+c5.lineTo(48, 168);
+c5.lineTo(75, 152);
+c5.fill();
+c5.beginPath();
+c5.moveTo(125, 130);
+c5.lineTo(152, 168);
+c5.lineTo(125, 152);
+c5.fill();
+c5.fillStyle = "#e8e8e8";
+c5.fillRect(75, 70, 50, 82);
+c5.fillStyle = "#e63946";
+c5.beginPath();
+c5.moveTo(75, 70);
+c5.lineTo(100, 22);
+c5.lineTo(125, 70);
+c5.fill();
+circle(c5, 100, 102, 13, "#4aa3df");
+
+let c6 = document.getElementById("c6").getContext("2d");
+c6.fillStyle = "#a5dcf5";
+c6.fillRect(0, 0, 200, 200);
+c6.fillStyle = "#ff9f1c";
+c6.beginPath();
+c6.moveTo(135, 100);
+c6.lineTo(182, 68);
+c6.lineTo(182, 132);
+c6.closePath();
+c6.fill();
+c6.beginPath();
+c6.ellipse(90, 100, 55, 33, 0, 0, Math.PI * 2);
+c6.fill();
+circle(c6, 62, 92, 8, "white");
+circle(c6, 62, 92, 3, "black");
+c6.strokeStyle = "white";
+c6.lineWidth = 2;
+c6.beginPath();
+c6.arc(35, 55, 7, 0, Math.PI * 2);
+c6.stroke();
+c6.beginPath();
+c6.arc(50, 35, 5, 0, Math.PI * 2);
+c6.stroke();
+
+let c7 = document.getElementById("c7").getContext("2d");
+c7.fillStyle = "#cfe8ff";
+c7.fillRect(0, 0, 200, 200);
+c7.fillStyle = "#777";
+c7.fillRect(0, 160, 200, 40);
+c7.fillStyle = "#e63946";
+c7.fillRect(30, 100, 140, 40);
+c7.beginPath();
+c7.moveTo(55, 100);
+c7.lineTo(75, 65);
+c7.lineTo(125, 65);
+c7.lineTo(145, 100);
+c7.closePath();
+c7.fill();
+c7.fillStyle = "#bfe3ff";
+c7.fillRect(80, 72, 18, 25);
+c7.fillRect(102, 72, 18, 25);
+circle(c7, 62, 145, 18, "black");
+circle(c7, 138, 145, 18, "black");
+circle(c7, 62, 145, 8, "#ccc");
+circle(c7, 138, 145, 8, "#ccc");
+
+let c8 = document.getElementById("c8").getContext("2d");
+c8.fillStyle = "#cfe8ff";
+c8.fillRect(0, 0, 200, 200);
+c8.fillStyle = "white";
+c8.fillRect(0, 172, 200, 28);
+circle(c8, 100, 138, 38, "#f2f2f2");
+circle(c8, 100, 92, 28, "#f2f2f2");
+circle(c8, 100, 58, 20, "#f2f2f2");
+c8.fillStyle = "black";
+c8.fillRect(78, 36, 44, 5);
+c8.fillRect(86, 16, 28, 21);
+circle(c8, 93, 54, 2.5, "black");
+circle(c8, 107, 54, 2.5, "black");
+c8.fillStyle = "orange";
+c8.beginPath();
+c8.moveTo(100, 58);
+c8.lineTo(116, 62);
+c8.lineTo(100, 66);
+c8.fill();
+circle(c8, 100, 85, 3, "black");
+circle(c8, 100, 100, 3, "black");
+circle(c8, 100, 130, 3, "black");
+circle(c8, 100, 147, 3, "black");
+</script>
+
+</body>
+</html>
